@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Sale</title>
+</head>
+
+<body>
+
+<h1>Delete Card Sale</h1>
+
+<p>
+    User: <strong>{{ sale.user.name }}</strong>
+</p>
+
+<p>
+    Cards: <strong>{{ sale.card_quantity }}</strong>
+</p>
+
+<p>
+    Amount: <strong>৳{{ sale.total_amount }}</strong>
+</p>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    <button type="submit">
+        Yes, Delete
+    </button>
+
+</form>
+
+<br>
+
+<a href="{% url 'sale_list' %}">
+    Cancel
+</a>
+
+</body>
+</html>
